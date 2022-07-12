@@ -1,10 +1,23 @@
-// prettier-ignore
 {
-  "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
+  "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig.json to read more about this file */
-
-    /* Completeness */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+    "outDir": "./lib",
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-native",
+    "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "types": ["node", "react", "jest"],
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["es2017", "DOM", "ES2018"],
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": [".src/"],
+  "exclude": ["./**/__tests__/**", "./__mocks__/**", "./**/*.test.ts", "./**/*.test.tsx"]
 }
